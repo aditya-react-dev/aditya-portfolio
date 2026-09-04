@@ -1,0 +1,204 @@
+:root,
+[data-theme="dark"] {
+  --bg: #08080d;
+  --bg-soft: #0d0d15;
+  --surface: rgba(255, 255, 255, 0.035);
+  --surface-strong: rgba(255, 255, 255, 0.06);
+  --border: rgba(255, 255, 255, 0.09);
+  --border-strong: rgba(255, 255, 255, 0.18);
+  --text: #f2f1f8;
+  --text-muted: #8d8aa3;
+  --violet: #8b5cf6;
+  --cyan: #22d3ee;
+  --gradient: linear-gradient(135deg, var(--violet), var(--cyan));
+  --on-gradient: #0b0b12;
+  --shadow-glow: 0 0 60px rgba(139, 92, 246, 0.15);
+  --card-shadow: 0 4px 28px rgba(0, 0, 0, 0.28);
+  --blob-opacity: 0.35;
+  --grid-line: rgba(255, 255, 255, 0.025);
+  --nav-bg-scrolled: rgba(8, 8, 13, 0.75);
+  --cursor-glow: rgba(139, 92, 246, 0.1);
+  --radius: 14px;
+}
+
+[data-theme="light"] {
+  --bg: #f7f7fb;
+  --bg-soft: #eef0f6;
+  --surface: rgba(20, 20, 35, 0.035);
+  --surface-strong: rgba(20, 20, 35, 0.055);
+  --border: rgba(20, 20, 35, 0.09);
+  --border-strong: rgba(20, 20, 35, 0.17);
+  --text: #16151f;
+  --text-muted: #5c5a70;
+  --violet: #7c3aed;
+  --cyan: #0891b2;
+  --gradient: linear-gradient(135deg, var(--violet), var(--cyan));
+  --on-gradient: #ffffff;
+  --shadow-glow: 0 0 50px rgba(124, 58, 237, 0.12);
+  --card-shadow: 0 4px 24px rgba(20, 20, 35, 0.06);
+  --blob-opacity: 0.14;
+  --grid-line: rgba(20, 20, 35, 0.035);
+  --nav-bg-scrolled: rgba(247, 247, 251, 0.8);
+  --cursor-glow: rgba(124, 58, 237, 0.06);
+  --radius: 14px;
+}
+
+body {
+  transition: background-color 0.35s ease, color 0.35s ease;
+}
+
+.scroll-progress {
+  position: fixed;
+  inset: 0 auto auto 0;
+  width: 100%;
+  height: 2px;
+  z-index: 200;
+  transform-origin: left;
+  background: var(--gradient);
+  box-shadow: 0 0 14px rgba(34, 211, 238, 0.7);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Inter", sans-serif;
+  line-height: 1.65;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+  font-family: "Sora", sans-serif;
+  letter-spacing: -0.02em;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+::selection {
+  background: var(--violet);
+  color: white;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.mono {
+  font-family: "JetBrains Mono", monospace;
+}
+
+.gradient-text {
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.container {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 28px;
+}
+
+@media (max-width: 640px) {
+  .container {
+    padding: 0 20px;
+  }
+}
+
+/* ── reveal-on-scroll ── */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* ── shared section chrome ── */
+.section {
+  padding: 120px 0;
+  position: relative;
+}
+@media (max-width: 768px) {
+  .section {
+    padding: 80px 0;
+  }
+}
+
+.section-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-bottom: 18px;
+}
+.section-tag .dash {
+  width: 22px;
+  height: 1px;
+  background: var(--gradient);
+}
+
+.section-title {
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  font-weight: 700;
+  margin-bottom: 50px;
+  max-width: 650px;
+}
+
+/* ── glass card base ── */
+.glass {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  backdrop-filter: blur(20px);
+  box-shadow: var(--card-shadow);
+  transition: border-color 0.3s ease, transform 0.3s ease,
+    box-shadow 0.3s ease, background-color 0.35s ease;
+}
+
+.glass:hover {
+  background: var(--surface-strong);
+}
+
+/* ── scrollbar ── */
+::-webkit-scrollbar {
+  width: 9px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border-strong);
+  border-radius: 10px;
+}
