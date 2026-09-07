@@ -3,29 +3,29 @@
 export const profile = {
   name: "Aditya",
   lastName: "",
-  roles: ["Frontend Developer", "React Developer", "UI Engineer"],
-  location: "Bengaluru, India",
+  roles: ["Frontend Developer", "React.js Developer", "UI Engineer"],
+  location: "India",
   tagline:
     "I turn product ideas into fast, thoughtful web experiences — with a sharp eye for UI detail and production-quality React.",
-  email: "your.email@example.com",
-  phone: "+91 XXXXX XXXXX",
-  github: "https://github.com/YOUR_GITHUB_USERNAME",
-  githubHandle: "github.com/YOUR_GITHUB_USERNAME",
-  linkedin: "https://linkedin.com/in/YOUR_LINKEDIN",
-  linkedinHandle: "linkedin.com/in/YOUR_LINKEDIN",
+  email: "aditya.kr.bca@gmail.com",
+  phone: "+91 8797381717",
+  github: "https://github.com/aditya-react-dev",
+  githubHandle: "github.com/aditya-react-dev",
+  linkedin: "https://linkedin.com/in/aditya-6b6a9220a",
+  linkedinHandle: "linkedin.com/in/aditya-6b6a9220a",
   resumeFile: "/resume.pdf", // drop your resume.pdf inside the public/ folder
 };
 
 export const about = [
-  "Frontend Developer with 3+ years of experience building responsive, production-ready web applications using React.js, JavaScript (ES6+), Redux and Tailwind CSS.",
-  "Comfortable owning a UI end-to-end — from wiring up REST APIs to shipping pixel-accurate, accessible layouts. Currently expanding into TypeScript and exploring the Node.js side of the MERN stack.",
-  "Outside of client work, I like building small side projects to try out new tools and patterns before bringing them into production code.",
+  "Frontend Developer with 3+ years of experience building high-performance, scalable web applications using React.js, Tailwind CSS and modern JavaScript.",
+  "I translate Figma designs into pixel-perfect, accessible UI components for e-commerce and SaaS products — from clean component architecture and state management through to REST API integration.",
+  "My work has improved Lighthouse performance scores from 60 to 90+, reduced initial load time by 20%, and increased engagement by 25% through responsive, accessibility-focused redesigns.",
 ];
 
 export const stats = [
   { value: 3, suffix: "+", label: "Years experience" },
   { value: 10, suffix: "+", label: "Projects shipped" },
-  { value: 8, suffix: "+", label: "Core technologies" },
+  { value: 90, suffix: "+", label: "Lighthouse score achieved" },
 ];
 
 export const strengths = [
@@ -39,50 +39,50 @@ export const skills = [
   { name: "JavaScript (ES6+)", level: 88 },
   { name: "Redux", level: 80 },
   { name: "Tailwind CSS", level: 85 },
-  { name: "REST APIs", level: 82 },
-  { name: "Git", level: 80 },
-  { name: "TypeScript", level: 45 },
-  { name: "Node.js", level: 40 },
+  { name: "Next.js", level: 65 },
+  { name: "REST APIs & JWT", level: 82 },
+  { name: "Performance optimization", level: 85 },
+  { name: "TypeScript", level: 60 },
 ];
 
 export const projects = [
   {
-    title: "Task Manager App",
+    title: "E-Commerce Admin Dashboard",
     description:
-      "A task management app built with Vite and Tailwind CSS, with create, update and status-tracking flows.",
-    tags: ["React", "Vite", "Tailwind"],
-    github: "#",
-    live: "#",
+      "An analytics dashboard that lets business teams track sales, revenue and users through interactive, easy-to-scan visualizations.",
+    tags: ["React.js", "Tailwind CSS", "Chart.js"],
+    github: null,
+    live: null,
     accent: "violet",
     number: "01",
   },
   {
-    title: "Analytics Dashboard",
+    title: "Personal Portfolio Website",
     description:
-      "A React dashboard scaffolded with Vite and Recharts, featuring interactive charts and a clean data layout.",
-    tags: ["React", "Recharts", "Vite"],
-    github: "#",
-    live: "#",
+      "A mobile-first developer portfolio with a clean component architecture, fast loading experience and Vercel deployment workflow.",
+    tags: ["React.js", "Vercel", "Responsive UI"],
+    github: "https://github.com/aditya-react-dev",
+    live: "https://aditya-portfolio-eosin-iota.vercel.app",
     accent: "cyan",
     number: "02",
   },
   {
-    title: "Client Website — Pbtech Group",
+    title: "Client Web Builds",
     description:
-      "Frontend implementation on a multi-section business site: a responsive embedded map and styled social sections.",
-    tags: ["HTML", "CSS", "Responsive"],
+      "Delivered responsive static and dynamic client websites across finance and education, with consistent visual systems and polished UI.",
+    tags: ["React.js", "HTML5", "CSS3"],
     github: null,
-    live: "#",
+    live: null,
     accent: "violet",
     number: "03",
   },
   {
-    title: "Landing Page — Elementor Build",
+    title: "Reusable UI Component Kits",
     description:
-      "A responsive landing page built in Elementor on WordPress, delivered as a client technical assignment.",
-    tags: ["WordPress", "Elementor", "Responsive"],
+      "Created reusable interface components that cut development time by 30% per sprint while keeping product UI consistent.",
+    tags: ["React.js", "Tailwind CSS", "Figma"],
     github: null,
-    live: "#",
+    live: null,
     accent: "cyan",
     number: "04",
   },
@@ -92,12 +92,24 @@ export const experience = [
   {
     company: "Nipunar Consultancy Services",
     role: "Frontend Developer (Associate Software Engineer)",
-    location: "Bengaluru",
-    period: "2023 — Present",
+    location: "",
+    period: "Sept 2023 — Present",
     points: [
-      "Built and maintained responsive UIs using React.js, Redux and Tailwind CSS.",
-      "Integrated REST APIs and collaborated with backend teams to ship features end-to-end.",
-      "Worked in a fast-paced consultancy setting across multiple client projects.",
+      "Developed React-based interfaces for e-commerce and dashboard applications, improving responsiveness and maintainability.",
+      "Implemented code-splitting and lazy loading to reduce initial page load time by 20%, raising Lighthouse scores from 60 to 90+.",
+      "Integrated Stripe payments and JWT-based authentication, while shipping pixel-perfect Tailwind components from Figma designs.",
+      "Increased engagement by 25% through responsive redesigns and improved key user flows with WCAG accessibility enhancements.",
+    ],
+  },
+  {
+    company: "Nipunar Consultancy Services",
+    role: "Junior Front-End Developer",
+    location: "",
+    period: "Jul 2022 — Aug 2023",
+    points: [
+      "Delivered 10+ static and dynamic websites across finance and education domains.",
+      "Modernized legacy JavaScript codebases into React.js, improving maintainability and performance.",
+      "Built reusable UI component kits that reduced development time by 30% per sprint and supported a 15% improvement in client satisfaction.",
     ],
   },
 ];

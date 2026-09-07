@@ -16,7 +16,7 @@ function TimelineItem({ item, index }) {
           <span className="tl-period mono">{item.period}</span>
         </div>
         <div className="tl-role mono">
-          {item.role} · {item.location}
+          {item.role}{item.location && ` · ${item.location}`}
         </div>
         <ul>
           {item.points.map((p, i) => (
